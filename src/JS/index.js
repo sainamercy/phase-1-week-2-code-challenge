@@ -27,13 +27,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const data = await getData();
     data.map((item) => {
       if (e.target.innerHTML === item.name) {
-        const markUp = `<div class="animalCard"><p>${item.name}</p>
-    <img src="${item.image}" alt="${item.name}">
-    <div class="votes"><label>
-    <span id="label">Enter no. of votes 0 - 10</span>
-    <input id="votesInput" type="number" min="0" max="10">
-</label><p id="vote"><i class="fa-regular fa-heart"></i></p>
-    <p id="votesCount">votes: ${item.votes}</p></div></div>`;
+        const markUp = `<div class="animalCard">
+      <p>${item.name}</p>
+      <img src="${item.image}" alt="${item.name}">
+      <div class="votes">
+        <label>
+          <span id="label">Enter no. of votes 0 - 10</span>
+          <input id="votesInput" type="number" min="0" max="10">
+        </label>
+        <p id="vote"><i class="fa-regular fa-heart"></i></p>
+        <p id="votesCount">votes: ${item.votes}</p>
+      </div>
+    </div>`;
         animalDetails.innerHTML = "";
         animalDetails.insertAdjacentHTML("afterbegin", markUp);
       }
@@ -46,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const data = await getData();
     data.map((item) => {
       if (e.target.classList.contains("fa-heart")) {
+        // getting elements from the DOM
         const inputSec = animalDetails.querySelector("label");
         const labelContent = animalDetails.querySelector("#label");
         const heart = document.querySelector(".fa-heart");
@@ -53,7 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const votesInput = parseInt(
           document.querySelector("#votesInput").value
         );
+        // Initializing votes
         let votes = item.votes;
+        // setting votes range
         if (votesInput >= 0 && votesInput <= 10) {
           labelContent.textContent = "enter no. of votes 0 - 10";
           heart.classList.toggle("red");
