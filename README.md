@@ -2,7 +2,7 @@
 
 ## Description
 
-This is an animals voting application
+This is an animals voting application.
 
 # Author
 
@@ -15,6 +15,7 @@ This is an animals voting application
 ## Features
 
 - Click on any animal's name on the left side of the web page to display the animal's details.
+- Enter the number of votes between `0 - 10` in the input field provided. then:
 - Click on the heart icon to vote.
 - To undo votes, click on the heart icon again.
 
@@ -24,14 +25,14 @@ This is an animals voting application
 
 In order for you to use the content on this repo ensure you have the following:
 
-- A computer that runs on either of the following; (Windows 7+, Linux, Mac OS)
+- A computer that runs on either of the following; (Windows 7+, Linux, Mac OS).
 -  nodejs 9.0+
-- Visual Studio Code
+- Visual Studio Code.
 - Live server extension.
 
 ### Alternative One
 
-- Open a terminal / command line interface on your computer
+- Open a terminal / command line interface on your computer.
 - Clone the repo by using the following to create a copy on your local machine:
 
         git clone https://github.com/sainamercy/phase-1-week-2-code-challenge 
@@ -62,7 +63,7 @@ To run the application, you can use the following steps to run the app.
         json-server --watch db.json
     
 - Right click on the `index.html` and navigate to `Open With Live Server` option, to open the application on your browser.
-- Repeat the steps on the `Features` section above
+- Repeat the steps on the `Features` section above.
 
 # License
 
