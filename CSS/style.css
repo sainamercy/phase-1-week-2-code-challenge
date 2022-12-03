@@ -25,6 +25,7 @@ body {
   margin-right: 100px;
   margin-left: 100px;
   border-radius: 20px;
+  position: relative;
 }
 #animalNames {
   width: 20%;
@@ -92,4 +93,36 @@ h4 {
 }
 .red {
   color: red;
+}
+#addAnimalsSection{
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  background-color: rgb(89, 191, 224);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  top: 200px;
+  left: 30%;
+  right: 30%;
+  display: none;
+}
+form{
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+form input, form button{
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+}
+#cancel{
+  border-radius: 30%;
+  padding: 10px;
 }

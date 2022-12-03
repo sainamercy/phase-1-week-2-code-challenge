@@ -56,9 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const labelContent = animalDetails.querySelector("#label");
         const heart = document.querySelector(".fa-heart");
         const votesCount = document.querySelector("#votesCount");
-        const votesInput = parseInt(
-          document.querySelector("#votesInput").value
-        );
+        const votesInput = parseInt(document.querySelector("#votesInput").value);
         // Initializing votes
         let votes = item.votes;
         // setting votes range
@@ -81,4 +79,24 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   animalDetails.addEventListener("click", renderVotes);
+
+  // add animals
+  const addAnimalBtn = document.querySelector("#addAnimal")
+  const form = document.querySelector("form")
+  const mainSection = document.querySelector(".mainSection")
+  const closeForm = document.querySelector("#cancel")
+  
+  const addAnimal  = function(e){
+    e.preventDefault()
+    const addAnimalsSection = document.querySelector("#addAnimalsSection")
+    mainSection.style.filter = "blur(10px)"
+    addAnimalsSection.style.display = "flex"
+    closeForm.addEventListener("click", function(){
+      addAnimalsSection.style.display = "none"
+      mainSection.style.filter = "blur(0)"
+    })
+  }
+
+  addAnimalBtn.addEventListener("click", addAnimal)
+
 });
