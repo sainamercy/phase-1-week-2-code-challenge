@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const markUp = `<div class="animalCard"><p>${item.name}</p>
     <img src="${item.image}" alt="${item.name}">
     <div class="votes"><label>
-    <span>Enter no. of votes 0 - 10</span>
+    <span id="label">Enter no. of votes 0 - 10</span>
     <input id="votesInput" type="number" min="0" max="10">
 </label><p id="vote"><i class="fa-regular fa-heart"></i></p>
     <p id="votesCount">votes: ${item.votes}</p></div></div>`;
