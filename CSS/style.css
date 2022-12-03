@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(89, 191, 224);
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: navy;
+}
+.header img {
+  width: 30%;
+  height: 50px;
+}
+.mainSection {
+  display: flex;
+  height: 80%;
+  margin-right: 100px;
+  margin-left: 100px;
+  border-radius: 20px;
+}
+#animalNames {
+  width: 20%;
+  margin: 10px;
+  background-color: navy;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: rgb(218, 211, 211);
+  font-size: 2rem;
+}
+h4 {
+  margin-top: 10px;
+  color: rgb(216, 29, 154);
+}
+#addAnimal {
+  padding: 10px;
+  color: rgb(218, 211, 211);
+  background-color: rgb(216, 29, 154);
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+#animalNames p {
+  width: 90%;
+  margin: auto;
+  padding: 16px;
+  font-size: 1.5rem;
+  border: 1px solid rgb(208, 255, 0);
+  border-radius: 3px;
+}
+#animalDetails {
+  margin: 10px;
+  width: 80%;
+  background-color: rgb(208, 255, 0);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.animalCard {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  height: 90%;
+  width: 70%;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px 4px rgb(39, 38, 38);
+  /* color: navy; */
+  font-size: 2rem;
+  background-color: azure;
+}
+#animalDetails img {
+  height: 60%;
+}
+.votes {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+.red {
+  color: red;
+}
