@@ -1,0 +1,19 @@
+{
+  "name": "phase-1-week-2-code-challenge",
+  "version": "1.0.0",
+  "description": "Animals voting application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sainamercy/phase-1-week-2-code-challenge.git"
+  },
+  "author": "Mercy Saina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sainamercy/phase-1-week-2-code-challenge/issues"
+  },
+  "homepage": "https://github.com/sainamercy/phase-1-week-2-code-challenge#readme"
+}
