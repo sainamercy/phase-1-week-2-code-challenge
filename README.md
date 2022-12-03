@@ -59,7 +59,7 @@ To run the application, you can use the following steps to run the app.
 
 - On your terminal in the project folder run the following command to get backend started:
 
-     json-server --watch db.json
+        json-server --watch db.json
     
 - Right click on the `index.html` and navigate to `Open With Live Server` option, to open the application on your browser.
 - Repeat the steps on the `Features` section above
