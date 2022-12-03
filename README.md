@@ -58,9 +58,15 @@ In order for you to use the content on this repo ensure you have the following:
 
 To run the application, you can use the following steps to run the app.
 
-- On your terminal in the project folder run the following command to get backend started:
+- Install `json-server`
 
-        json-server --watch db.json
+        npm install json-server
+
+- Then follow instructions [here](https://gist.github.com/ihollander/cc5f36c6447d15dea6a16f68d82aacf7) for `live server` to work well with `json-server`
+
+- Run the following command to get backend started:
+
+        npm start
     
 - Right click on the `index.html` and navigate to `Open With Live Server` option, to open the application on your browser.
 - Repeat the steps on the `Features` section above.
