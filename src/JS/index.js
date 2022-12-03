@@ -29,13 +29,32 @@ document.addEventListener("DOMContentLoaded", function () {
       if (e.target.innerHTML === item.name) {
         const markUp = `<div class="animalCard"><p>${item.name}</p>
     <img src="${item.image}" alt="${item.name}">
-    <div class="votes"><p>vote <i class="fa-regular fa-heart"></i></p>
-    <p>votes: ${item.votes}</p></div></div>`;
+    <div class="votes"><p id="vote">vote <i class="fa-regular fa-heart"></i></p>
+    <p id="votesCount">votes: ${item.votes}</p></div></div>`;
         animalDetails.innerHTML = "";
         animalDetails.insertAdjacentHTML("afterbegin", markUp);
       }
     });
   };
-
   animalNames.addEventListener("click", renderAnimalDetails);
+
+  const renderVotes = async function (e) {
+    const data = await getData();
+    data.map((item) => {
+      if (e.target.classList.contains("fa-heart")) {
+        const heart = document.querySelector(".fa-heart");
+        const votesCount = document.querySelector("#votesCount");
+        let votes = item.votes;
+        heart.classList.toggle("red");
+        if (heart.classList.contains("red")) {
+          votes++;
+        } else {
+          votes = item.votes;
+        }
+        votesCount.innerHTML = `votes: ${votes}`;
+      }
+    });
+  };
+
+  animalDetails.addEventListener("click", renderVotes);
 });
