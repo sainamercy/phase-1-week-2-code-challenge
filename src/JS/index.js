@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // get data
   const getData = async function () {
-    const response = await fetch("http://localhost:3000/characters/");
+    const response = await fetch("https://phase-1-week-2-code-challenge.vercel.app/db.json");
     const data = await response.json();
 
     return data;
