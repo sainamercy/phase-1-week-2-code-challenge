@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sainamercy/phase-1-week-2-code-challenge/issues"
   },
-  "homepage": "https://github.com/sainamercy/phase-1-week-2-code-challenge#readme"
+  "homepage": "https://github.com/sainamercy/phase-1-week-2-code-challenge#readme",
+  "dependencies": {
+    "json-server": "^0.17.1"
+  }
 }
