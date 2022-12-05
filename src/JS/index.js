@@ -110,20 +110,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const animalObj = {
       name: e.target.name.value,
       image: e.target.imageUrl.value,
-      votes: 0,
+      votes: 0
     };
-    fetch("https://phase-1-week-2-code-challenge.vercel.app/db.json", {
-      method: "POST",
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-      },
-      body: JSON.stringify(animalObj),
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-
+    console.log(animalObj);
+    // coming soon
+  //  fetch("http://localhost:3000/characters", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(animalObj),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //       const markUp = `<p>${data.name}</p>`;
+  //       animalNames.insertAdjacentHTML("beforeend", markUp)
+  //     });
+      
       hideForm();
   };
 
