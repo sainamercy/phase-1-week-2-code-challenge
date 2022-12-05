@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
       image: e.target.imageUrl.value,
       votes: 0,
     };
-    return fetch("https://phase-1-week-2-code-challenge.vercel.app/db.json", {
+    fetch("https://phase-1-week-2-code-challenge.vercel.app/db.json", {
       method: "POST",
       headers: {
         "Accept": "application/json",
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((res) => res.json())
       .then((data) => console.log(data));
 
-    hideForm();
+      hideForm();
   };
 
   form.addEventListener("submit", addAnimal);
