@@ -15,7 +15,7 @@ This is an animals voting application.
 ## Features
 
 - Click on any animal's name on the left side of the web page to display the animal's details.
-- Enter the number of votes between `0 - 10` in the input field provided. then:
+- Enter the number of votes on a scale of `0 - 10` in the input field provided. then:
 - Click on the heart icon to vote.
 - To undo votes, click on the heart icon again.
 
