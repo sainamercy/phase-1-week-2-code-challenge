@@ -6,9 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // get data
   const getData = async function () {
-    const response = await fetch("https://phase-1-week-2-code-challenge.vercel.app/db.json");
+    const response = await fetch(
+      "https://phase-1-week-2-code-challenge.vercel.app/db.json"
+    );
     const data = await response.json();
-    
+
     return data.characters;
   };
 
@@ -56,7 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const labelContent = animalDetails.querySelector("#label");
         const heart = document.querySelector(".fa-heart");
         const votesCount = document.querySelector("#votesCount");
-        const votesInput = parseInt(document.querySelector("#votesInput").value);
+        const votesInput = parseInt(
+          document.querySelector("#votesInput").value
+        );
         // Initializing votes
         let votes = item.votes;
         // setting votes range
@@ -80,23 +84,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
   animalDetails.addEventListener("click", renderVotes);
 
-  // add animals
-  const addAnimalBtn = document.querySelector("#addAnimal")
-  const form = document.querySelector("form")
-  const mainSection = document.querySelector(".mainSection")
-  const closeForm = document.querySelector("#cancel")
-  
-  const addAnimal  = function(e){
-    e.preventDefault()
-    const addAnimalsSection = document.querySelector("#addAnimalsSection")
-    mainSection.style.filter = "blur(10px)"
-    addAnimalsSection.style.display = "flex"
-    closeForm.addEventListener("click", function(){
-      addAnimalsSection.style.display = "none"
-      mainSection.style.filter = "blur(0)"
+  // add animals section
+  const addAnimalBtn = document.querySelector("#addAnimal");
+  const form = document.querySelector("form");
+  const mainSection = document.querySelector(".mainSection");
+  const closeForm = document.querySelector("#cancel");
+  const addAnimalsSection = document.querySelector("#addAnimalsSection");
+
+  // display form
+  const displayForm = function () {
+    mainSection.style.filter = "blur(10px)";
+    addAnimalsSection.style.display = "flex";
+  };
+  addAnimalBtn.addEventListener("click", displayForm);
+
+  // hide form
+  const hideForm = function () {
+    addAnimalsSection.style.display = "none";
+    mainSection.style.filter = "blur(0)";
+  };
+  closeForm.addEventListener("click", hideForm);
+
+  const addAnimal = function (e) {
+    e.preventDefault();
+    const animalObj = {
+      name: e.target.name.value,
+      image: e.target.imageUrl.value,
+      votes: 0,
+    };
+    return fetch("https://phase-1-week-2-code-challenge.vercel.app/db.json", {
+      method: "POST",
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify(animalObj),
     })
-  }
+      .then((res) => res.json())
+      .then((data) => console.log(data));
 
-  addAnimalBtn.addEventListener("click", addAnimal)
+    hideForm();
+  };
 
+  form.addEventListener("submit", addAnimal);
 });
