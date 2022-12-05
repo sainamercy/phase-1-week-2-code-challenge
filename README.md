@@ -10,7 +10,7 @@ This is an animals voting application.
 
 # Live link
 
-- [click to open application]()
+- [click to open application](http://phase-1-week-2-code-challenge.vercel.app/)
 
 ## Features
 
