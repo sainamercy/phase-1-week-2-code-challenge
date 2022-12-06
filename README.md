@@ -18,6 +18,7 @@ This is an animals voting application.
 - Enter the number of votes on a scale of `0 - 10` in the input field provided. then:
 - Click on the heart icon to vote.
 - To undo votes, click on the heart icon again.
+- `Add animal` section is incomplete
 
 # Development installation
 
